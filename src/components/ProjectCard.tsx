@@ -20,7 +20,9 @@ import {
   Volume2,
   AlertOctagon,
   Sparkles,
-  MapPin
+  MapPin,
+  ShieldAlert,
+  Lock
 } from 'lucide-react';
 
 interface ProjectCardProps {
@@ -1184,6 +1186,128 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       );
     }
 
+    if (project.id === 'cybershield') {
+      return (
+        <div className="w-full h-full bg-[#0B1220] rounded-2xl p-3.5 text-white font-sans flex flex-col justify-between overflow-hidden relative border border-cyan-500/40 shadow-[0_0_30px_rgba(6,182,212,0.25)]">
+          <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20">
+            <pattern id="cyber-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+              <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#06B6D4" strokeWidth="0.5" />
+            </pattern>
+            <rect width="100%" height="100%" fill="url(#cyber-grid)" />
+          </svg>
+
+          <div className="flex items-center justify-between pb-2 border-b border-slate-800 text-xs font-mono z-10">
+            <div className="flex items-center gap-2">
+              <ShieldAlert className="w-4 h-4 text-cyan-400 animate-pulse" />
+              <span className="font-bold tracking-wider text-slate-200">CYBERSHIELD_SOC_ENGINE v3.4</span>
+            </div>
+            <span className="px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-400 font-mono text-[10px] border border-rose-500/30 font-bold flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-ping" /> CRITICAL ALERT
+            </span>
+          </div>
+
+          <div className="my-1.5 grid grid-cols-12 gap-2 z-10 font-mono">
+            <div className="col-span-7 bg-slate-950/90 p-2.5 rounded-xl border border-slate-800 flex flex-col justify-between space-y-2">
+              <div className="relative bg-slate-900 rounded-lg p-1.5 border border-cyan-500/30 flex items-center justify-between overflow-hidden text-[10.5px]">
+                <motion.div 
+                  animate={{ x: ['-100%', '200%'] }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-y-0 w-8 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent pointer-events-none skew-x-12 z-20"
+                />
+                <div className="flex items-center gap-1.5 text-slate-300 font-medium truncate">
+                  <Lock className="w-3 h-3 text-amber-400 shrink-0" />
+                  <span className="text-rose-400 font-bold truncate">http://verify-bank-security-phish.net/login</span>
+                </div>
+                <span className="text-[9px] font-bold text-cyan-400 bg-cyan-950 px-1.5 py-0.5 rounded border border-cyan-500/40 shrink-0">
+                  SCANNING
+                </span>
+              </div>
+
+              <div className="space-y-1 text-[9.5px]">
+                <div className="flex items-center justify-between text-slate-400">
+                  <span>ML Classifier</span>
+                  <span className="text-cyan-300 font-bold">Random Forest + XGBoost</span>
+                </div>
+                <div className="flex items-center justify-between text-slate-400">
+                  <span>Lexical Features</span>
+                  <span className="text-emerald-400 font-bold">30 Structural Vectors</span>
+                </div>
+                <div className="flex items-center justify-between text-slate-400">
+                  <span>GeoLite2 ASN Lookup</span>
+                  <span className="text-purple-400 font-bold">AS14201 • Proxy Detected</span>
+                </div>
+              </div>
+
+              <div className="bg-rose-950/60 p-2 rounded-lg border border-rose-500/50 text-[10px] space-y-0.5">
+                <div className="flex items-center justify-between font-bold text-rose-400">
+                  <span className="flex items-center gap-1">
+                    <AlertTriangle className="w-3 h-3 text-rose-400" /> VERDICT: MALICIOUS
+                  </span>
+                  <span className="bg-rose-500 text-white text-[9px] px-1 py-0.2 rounded font-extrabold">HIGH RISK</span>
+                </div>
+                <p className="text-slate-300 text-[9px] leading-tight">
+                  Phishing vector detected with 92% threat score. Connection blocked.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-span-5 bg-slate-950/90 p-2.5 rounded-xl border border-slate-800 flex flex-col justify-between items-center text-center">
+              <div className="relative w-16 h-16 flex items-center justify-center my-1">
+                <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                  <path
+                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                    fill="none"
+                    stroke="#1E293B"
+                    strokeWidth="3.5"
+                  />
+                  <motion.path
+                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                    fill="none"
+                    stroke="#EF4444"
+                    strokeWidth="3.5"
+                    strokeDasharray="92, 100"
+                    initial={{ strokeDasharray: "0, 100" }}
+                    animate={{ strokeDasharray: "92, 100" }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+                  />
+                </svg>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <span className="text-sm font-extrabold text-rose-400 leading-none">92%</span>
+                  <span className="text-[7.5px] font-bold text-slate-400 uppercase tracking-tighter">THREAT SCORE</span>
+                </div>
+              </div>
+
+              <div className="w-full space-y-1 text-[9px] font-bold">
+                <div className="bg-slate-900 p-1 rounded border border-slate-800 flex justify-between text-slate-300">
+                  <span className="text-slate-400">Confidence</span>
+                  <span className="text-cyan-400">90.0%</span>
+                </div>
+                <div className="bg-slate-900 p-1 rounded border border-slate-800 flex justify-between text-slate-300">
+                  <span className="text-slate-400">Latency</span>
+                  <span className="text-emerald-400">&lt; 12ms</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-3 gap-1.5 text-center font-mono text-[9.5px] z-10">
+            <div className="bg-slate-900/90 p-1.5 rounded-lg border border-slate-800">
+              <span className="text-slate-400 block text-[8.5px]">MODEL ACCURACY</span>
+              <span className="font-bold text-cyan-400">90.0%</span>
+            </div>
+            <div className="bg-slate-900/90 p-1.5 rounded-lg border border-slate-800">
+              <span className="text-slate-400 block text-[8.5px]">PREDICTION SPEED</span>
+              <span className="font-bold text-emerald-400">&lt; 12ms</span>
+            </div>
+            <div className="bg-slate-900/90 p-1.5 rounded-lg border border-slate-800">
+              <span className="text-slate-400 block text-[8.5px]">STATUS</span>
+              <span className="font-bold text-amber-400">PROTOTYPE</span>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     // Default: RAG Chatbot fallback
     return (
       <div className="w-full h-full bg-[#0B0F19] rounded-2xl p-4 text-white font-sans flex flex-col justify-between overflow-hidden relative border border-amber-500/40 shadow-2xl">
@@ -1328,7 +1452,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="lg:col-span-6 flex flex-col items-start">
           <div className="flex items-center gap-3 mb-4">
             <span className="font-mono-code text-sm font-bold text-[#2563EB] bg-[#2563EB]/10 px-3 py-1 rounded-full">
-              Project 0{index + 1}
+              Project {index + 1 < 10 ? `0${index + 1}` : index + 1}
             </span>
             <span className="text-xs font-bold text-[#14B8A6] bg-[#14B8A6]/10 px-3 py-1 rounded-full">
               {project.category}

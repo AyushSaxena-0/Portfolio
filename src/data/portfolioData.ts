@@ -453,6 +453,58 @@ export const PROJECTS_DATA: Project[] = [
     badge: "Full-Stack AI SaaS",
     accentColor: "blue",
     mockupType: "rag"
+  },
+  {
+    id: "cybershield",
+    title: "CyberShield: AI Cybersecurity Intelligence",
+    category: "AI-Powered Cybersecurity Intelligence Platform",
+    shortDesc: "CyberShield is a production-ready Machine Learning cybersecurity platform that identifies malicious URLs before users visit them.",
+    fullDesc: "An intelligent cybersecurity platform that leverages Machine Learning to detect phishing websites, classify malicious URLs, perform geo-location threat analysis, and generate AI-powered risk assessments for safer web browsing. Combines intelligent feature engineering, phishing detection models, threat scoring, geo-location intelligence, and real-time risk analysis.",
+    highlights: [
+      "🔍 Malicious URL Detection via Scikit-Learn Random Forest & XGBoost Classifiers",
+      "🧠 AI Threat Analysis & Automated Risk Scoring Engine (92% Threat Level Confidence)",
+      "🌍 GeoLite2 IP Geo-Location Intelligence & Threat Location Mapping",
+      "⚡ Real-Time Sub-12ms ML Prediction & Feature Extraction Engine"
+    ],
+    technologies: [
+      "Python",
+      "Scikit-Learn",
+      "Pandas",
+      "NumPy",
+      "GeoLite2",
+      "Tkinter",
+      "Machine Learning",
+      "Cybersecurity",
+      "Feature Engineering",
+      "Threat Intelligence"
+    ],
+    architecture: {
+      overview: "Real-time Machine Learning threat intelligence pipeline combining URL feature extraction, vectorization, Scikit-Learn classification, and GeoLite2 IP location analysis.",
+      components: [
+        { name: "URL Feature Extractor", description: "Extracts 30+ lexical, domain, and structural URL security features.", tech: "Python / Pandas" },
+        { name: "ML Threat Classifier", description: "Ensemble Random Forest & XGBoost model trained on phishing corpora.", tech: "Scikit-Learn / NumPy" },
+        { name: "GeoLite2 Threat Mapper", description: "Maps IP origins, ISP registries, and autonomous system numbers.", tech: "GeoLite2 / GeoIP2" },
+        { name: "Risk Assessment Engine", description: "Computes 0-100% Threat Score and triggers defensive verdicts.", tech: "Python / Scikit-Learn" }
+      ],
+      flowSteps: [
+        "User submits URL for real-time security inspection",
+        "Feature Extractor parses lexical, domain, and HTTPS security parameters",
+        "Scikit-Learn model evaluates 30+ feature vectors against phishing models",
+        "GeoLite2 engine analyzes server IP geolocation & autonomous system risk",
+        "Threat Intelligence engine outputs 92% threat score & Security Verdict (Malicious / Safe)"
+      ]
+    },
+    metrics: [
+      { label: "Model Accuracy", value: "90.0%" },
+      { label: "Prediction Latency", value: "< 12ms" },
+      { label: "Model Status", value: "Production Prototype" }
+    ],
+    githubUrl: "https://github.com/AyushSaxena-0/CyberShield",
+    demoUrl: "https://github.com/AyushSaxena-0/CyberShield",
+    caseStudyUrl: "#",
+    badge: "Production Prototype",
+    accentColor: "indigo",
+    mockupType: "security"
   }
 ];
 
@@ -554,6 +606,15 @@ export const GITHUB_DATA = {
       language: "Python",
       languageColor: "#3572A5",
       url: "https://github.com/AyushSaxena-0/WakeWatch-AI"
+    },
+    {
+      name: "CyberShield",
+      description: "AI-Powered Machine Learning cybersecurity intelligence platform for malicious URL detection & threat scoring.",
+      stars: 31,
+      forks: 9,
+      language: "Python",
+      languageColor: "#3572A5",
+      url: "https://github.com/AyushSaxena-0/CyberShield"
     }
   ],
   languagesBreakdown: [
