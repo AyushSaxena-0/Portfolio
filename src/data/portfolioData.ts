@@ -461,10 +461,10 @@ export const PROJECTS_DATA: Project[] = [
     shortDesc: "CyberShield is a production-ready Machine Learning cybersecurity platform that identifies malicious URLs before users visit them.",
     fullDesc: "An intelligent cybersecurity platform that leverages Machine Learning to detect phishing websites, classify malicious URLs, perform geo-location threat analysis, and generate AI-powered risk assessments for safer web browsing. Combines intelligent feature engineering, phishing detection models, threat scoring, geo-location intelligence, and real-time risk analysis.",
     highlights: [
-      "🔍 Malicious URL Detection via Scikit-Learn Random Forest & XGBoost Classifiers",
-      "🧠 AI Threat Analysis & Automated Risk Scoring Engine (92% Threat Level Confidence)",
-      "🌍 GeoLite2 IP Geo-Location Intelligence & Threat Location Mapping",
-      "⚡ Real-Time Sub-12ms ML Prediction & Feature Extraction Engine"
+      "Malicious URL Detection via Scikit-Learn Random Forest & XGBoost Classifiers",
+      "AI Threat Analysis & Automated Risk Scoring Engine (92% Threat Level Confidence)",
+      "GeoLite2 IP Geo-Location Intelligence & Threat Location Mapping",
+      "Real-Time Sub-12ms ML Prediction & Feature Extraction Engine"
     ],
     technologies: [
       "Python",
