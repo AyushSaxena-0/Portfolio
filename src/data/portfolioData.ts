@@ -161,7 +161,7 @@ export const PROJECTS_DATA: Project[] = [
       { label: "False Negatives", value: "< 2.1%" }
     ],
     githubUrl: "https://github.com/AyushSaxena-0/skin-disease-detection",
-    demoUrl: "https://github.com/AyushSaxena-0",
+    demoUrl: "https://github.com/AyushSaxena-0/skin-disease-detection",
     caseStudyUrl: "#",
     badge: "Patent Granted",
     accentColor: "blue",
@@ -202,7 +202,7 @@ export const PROJECTS_DATA: Project[] = [
       { label: "Vector Latency", value: "< 95ms" }
     ],
     githubUrl: "https://github.com/AyushSaxena-0/bhagavad-gita-rag-chatbot",
-    demoUrl: "https://github.com/AyushSaxena-0",
+    demoUrl: "https://github.com/AyushSaxena-0/bhagavad-gita-rag-chatbot",
     caseStudyUrl: "#",
     badge: "Production RAG",
     accentColor: "blue",
@@ -243,7 +243,7 @@ export const PROJECTS_DATA: Project[] = [
       { label: "Framerate", value: "60 FPS" }
     ],
     githubUrl: "https://github.com/AyushSaxena-0/gym-align-posture-cv",
-    demoUrl: "https://github.com/AyushSaxena-0",
+    demoUrl: "https://github.com/AyushSaxena-0/gym-align-posture-cv",
     caseStudyUrl: "#",
     badge: "Award Winner",
     accentColor: "indigo",
@@ -366,7 +366,7 @@ export const PROJECTS_DATA: Project[] = [
       { label: "Evaluation Latency", value: "< 2.5s" }
     ],
     githubUrl: "https://github.com/AyushSaxena-0/multi-agent-recruitment",
-    demoUrl: "https://github.com/AyushSaxena-0",
+    demoUrl: "https://github.com/AyushSaxena-0/multi-agent-recruitment",
     caseStudyUrl: "#",
     badge: "Agentic AI",
     accentColor: "teal",
